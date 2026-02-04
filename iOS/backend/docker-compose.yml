@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  ri42-api:
+    build: ./apps/api
+    ports: ["8080:8080"]
+    environment:
+      - CONSCIOUSNESS_LEVEL=5
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: smepro_ri42
+      POSTGRES_USER: smepro

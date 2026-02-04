@@ -1,0 +1,13 @@
+{
+  "name": "smepro-ri42-substrate",
+  "version": "2.8.5",
+  "scripts": {
+    "dev": "docker-compose up --build",
+    "deploy": "gcloud run deploy ri42-api --source ."
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.2.0",
+    "stripe": "^14.0.0",
+    "pg": "^8.11.0"
+  }
+}
